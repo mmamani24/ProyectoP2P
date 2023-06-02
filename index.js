@@ -17,7 +17,8 @@ app.use("/peerjs", ExpressPeerServer(server, opinions));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.redirect(`/${uuidv4()}`);
+  res.send("hola mundo");
+  //res.redirect(`/${uuidv4()}`);
 });
 
 app.get("/:room", (req, res) => {
